@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/nguyen_huubaotrung/Source-code/appdriver-sdk/sdk-cocos2dx.git/japan/2.x/cocos2dxSample/proj.android/jni'
+let g:netrw_dirhist_2='/Users/nguyen_huubaotrung/TestCocos2d/cocos2d'
+let g:netrw_dirhist_3='/Users/nguyen_huubaotrung/Source-code/appdriver-sdk/sdk-titanium/module'
+let g:netrw_dirhist_4='/Users/nguyen_huubaotrung/TestCocos/TestCocos/proj.android/jni'
+let g:netrw_dirhist_5='/Users/nguyen_huubaotrung/Documents/AppDriverSourceCode/ref_11774'
+let g:netrw_dirhist_6='/Users/nguyen_huubaotrung/Source-code/eclipse_dev_space/OfferWallRedirectTestCode/build'
+let g:netrw_dirhist_7='/Users/nguyen_huubaotrung/Source-code/appdriver-sdk/sdk-native/AppDriverSDKTest/src'
+let g:netrw_dirhist_8='/Users/nguyen_huubaotrung/Documents/AppDriverSourceCode/luxon/ref_11871/template'
