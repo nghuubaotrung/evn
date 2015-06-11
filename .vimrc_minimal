@@ -6,10 +6,10 @@ set number
 colorscheme elflord
 set nobackup
 
-set runtimepath+=~/.vim/test/neobundle.vim/
+set runtimepath+=~/.vim/bundle/neobundle.vim/
  
 " Required:
-call neobundle#begin(expand('~/.vim/test/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
  
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
