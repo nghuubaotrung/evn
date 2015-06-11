@@ -1,0 +1,23 @@
+"return" 2>&- || "exit"
+syntax on
+filetype indent on
+set autoindent
+set number
+colorscheme elflord
+set nobackup
+
+set runtimepath+=~/.vim/test/neobundle.vim/
+ 
+" Required:
+call neobundle#begin(expand('~/.vim/test/'))
+ 
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'scrooloose/nerdtree'
+ 
+ 
+call neobundle#end()
+ 
+" Required:
+filetype plugin indent on
+ 
+NeoBundleCheck
