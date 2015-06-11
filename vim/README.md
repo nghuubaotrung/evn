@@ -1,4 +1,4 @@
-# Enviroment Settings
+# VIM 設定
 
 ## vimrc mininalについて
 
@@ -6,7 +6,7 @@
 
 ```
 	mkdir -p ~/.vim/bundle
-	
+
 	git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
 
