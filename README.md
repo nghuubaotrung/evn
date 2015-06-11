@@ -1,1 +1,1 @@
-##Enviroment Setting Files
+##Environment Setting Files
