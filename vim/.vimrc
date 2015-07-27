@@ -4,10 +4,9 @@ let g:EclimCompletionMethod = 'omnifunc'
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   set t_Co=256
-  call neobundle#rc (expand('~/.vim/bundle/'))
 endif
 
-execute pathogen#infect()
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
@@ -25,6 +24,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'toyamarinyon/vim-swift'
 
+call neobundle#end()
 
 " 引数なしでvimを開くとNERDTreeを起動
 let file_name = expand('%')
