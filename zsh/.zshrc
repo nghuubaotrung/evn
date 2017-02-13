@@ -32,14 +32,18 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git ruby osx bundler brew rails emoji-clock)
 
 # User configuration
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-# export PATH="/Users/nguyen_huubaotrung/Tools/android-sdks/tools:/Users/nguyen_huubaotrung/Tools/android-sdks/platform-tools:/Users/nguyen_huubaotrung/Tools/android-sdks:/Users/nguyen_huubaotrung/Tools/android-ndk-r9d:/Users/nguyen_huubaotrung/Tools/cocos2d-x/cocos2d-x-3.4/templates:/Users/nguyen_huubaotrung/Tools/cocos2d-x/cocos2d-x-3.4/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nguyen_huubaotrung/android-sdks/platform-tools"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export ANT_HOME=`/Users/nguyen_huubaotrung/Tools/apache-ant-1.9.4/bin/ant`
+export PATH="/Users/nguyen_huubaotrung/Tools/android-sdks/tools:/Users/nguyen_huubaotrung/Tools/android-sdks/platform-tools:/Users/nguyen_huubaotrung/Tools/android-sdks:/Users/nguyen_huubaotrung/Tools/android-ndk-r9d:/Users/nguyen_huubaotrung/Tools/cocos2d-x/cocos2d-x-3.4/templates:/Users/nguyen_huubaotrung/Tools/cocos2d-x/cocos2d-x-3.4/tools/cocos2d-console/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nguyen_huubaotrung/android-sdks/platform-tools"
 export PATH="/Users/nguyen_huubaotrung/Tools/android-sdks/build-tools/21.1.2":$PATH
 export PATH="/Users/nguyen_huubaotrung/Tools/activator-1.3.2-minimal":$PATH
 export PATH=$PATH:"/Users/nguyen_huubaotrung/Tools/play-2.2.3"
 export PATH="/Users/nguyen_huubaotrung/Tools/gradle-2.3/bin/":$PATH
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib":$PATH
+#export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib":$PATH
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib":$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/Users/nguyen_huubaotrung/bin/":$PATH
+export PATH="/Users/nguyen_huubaotrung/Tools/rundeck/rundeck-launcher/tools/bin":$PATH
 
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
@@ -73,6 +77,14 @@ source $ZSH/oh-my-zsh.sh
 
 # export LANG=en_US.UTF-8
 
+##Change path according your installation of Xcode
+#export XCODEB_PATH='/Users/nguyen_huubaotrung/Tools/Xcode6.3.1/Xcode.app/Contents/Developer/usr/bin/xcodebuild'
+#export _CODESIGN_ALLOCATE_='/Users/nguyen_huubaotrung/Tools/Xcode6.3.1/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate'
+##Trigger xcodebuild with correct environment
+#$XCODEB_PATH -version
+##Check supported sdks in this Xcode version
+#$XCODEB_PATH -showsdks
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -101,11 +113,33 @@ case "${OSTYPE}" in
 esac
 
 #alias ag='ag -i'
+#alias ag='ag -i'
 #alias ls='ls -G'
 #alias lsa='ls -la -G'
+alias training="ssh nghuubaotrung@192.168.56.13"
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias tmuxconf="vim ~/.tmux.conf"
 alias eclip='/Users/nguyen_huubaotrung/Source-code/eclipse_dev_space/'
 alias sdk='/Users/nguyen_huubaotrung/Source-code/appdriver-sdk/sdk-native/Android/AppDriverSDK'
-alias stepserver='ssh nguyen.huubaotrung@54.251.161.78'
+alias bnb='/Users/nguyen_huubaotrung/Source-code/bnbTrack'
+alias step_server='ssh nguyen.huubaotrung@54.251.161.78'
+alias theCat='ssh nghuubaotrung@192.168.220.13'
+alias theCat2='ssh vagrant@192.168.30.13'
+alias backup='ssh nghuubaotrung@192.168.220.23'
+alias port_forward='sudo vim /Library/Preferences/VMware\ Fusion/vmnet8/nat.conf'
+alias vmware_stop="sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop"
+alias vmware_start="sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start"
+alias battery_dump="adb shell dumpsys battery unplug"
+alias ios_sdk="cd /Users/nguyen_huubaotrung/Source-code/ada-sdk/ios/sdk-native"
+alias sdk_obfus="cd /Users/nguyen_huubaotrung/Source-code/Obj_Guard/sdk-ios-obfuscation"
+alias public="cd /Volumes/AdwaysPublic"
+alias teranyan="cd /Users/nguyen_huubaotrung/Vagrant/teranyan"
+alias asuka="cd /Users/nguyen_huubaotrung/Source-code/asuka/"
+alias ssh_teranyan="ssh nghuubaotrung@192.168.33.13"
+alias mokumoku="cd /Users/nguyen_huubaotrung/StudioProjects/mokumoku_android/android_studio_test_app"
+alias cd_rundeck="cd /Users/nguyen_huubaotrung/Tools/rundeck/rundeck-launcher/"
+alias run_rundeck="java -XX:MaxPermSize=256m -Xmx1024m -jar rundeck-launcher-2.6.7.jar"
+alias asuka_bot="cd /Users/nguyen_huubaotrung/Source-code/bnb-report-bot"
+alias run_asuka="HUBOT_SLACK_TOKEN=xoxb-19528944500-lY2LXuwjilvj5sIng7aGK6Kt ./bin/hubot --adapter slack"
+export PATH=$HOME/bin:$PATH

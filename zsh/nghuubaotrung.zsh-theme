@@ -26,5 +26,6 @@ SEPARATOR3=$(str_with_color white ':')
 CURRENT_DIRECTORY=$(str_with_color green '%~')
 PROMPT_CHAR=$(str_with_color white '$ ')
 PROMPT='${PROMPT_PREFIX}${LOCATION}${DATE_TIME}${SEPARATOR1}${USER_NAME}${SEPARATOR2}${HOST_NAME}${SEPARATOR3}${CURRENT_DIRECTORY} $(my_git_status)
-$PROMPT_CHAR'
-PROMPT2=$(str_with_color white '> ')
+${PROMPT_CHAR}'$(str_with_color white'')
+
+

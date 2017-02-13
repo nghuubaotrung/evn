@@ -1,47 +1,71 @@
 set nocompatible
-let g:EclimCompletionMethod = 'omnifunc'
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   set t_Co=256
+"  call neobundle#rc (expand('~/.vim/bundle/'))
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+execute pathogen#infect()
 
+"NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'Shougo/neobundle.vim'
+"NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+"NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neosnippet-snippets'
+"let g:neosnippet#enable_snipmate_compatibility = 1
+"let g:neosnippet#snippets_directory='~/.vim/snippets'
+"
+"
+"NeoBundle 'vim-scripts/The-NERD-tree'
+"NeoBundle 'itchyny/lightline.vim'
+"NeoBundle 'https://github.com/hallettj/jslint.vim.git'
+"NeoBundle 'nanotech/jellybeans.vim'
+"NeoBundle 'tomasr/molokai'
+"NeoBundle 'gosukiwi/vim-atom-dark'
+"NeoBundle 'toyamarinyon/vim-swift'
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.vim/snippets'
-
-
 NeoBundle 'vim-scripts/The-NERD-tree'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'https://github.com/hallettj/jslint.vim.git'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'toyamarinyon/vim-swift'
-
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'sjl/badwolf'
+NeoBundle 'gosukiwi/vim-atom-dark'
 call neobundle#end()
+
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/.vim/snippets'
+let g:indentLine_faster = 1
+let g:indentLine_color_gui = '#009900'
+
 
 " 引数なしでvimを開くとNERDTreeを起動
 let file_name = expand('%')
+
 if has('vim_starting') &&  file_name == ''
 autocmd VimEnter * NERDTree ./
 endif
+
 
 "----------------------------------------
 " カラースキーム
 "----------------------------------------
 "colorscheme jellybeans
-colorscheme molokai
-"syntax on
+"colorscheme molokai
+colorscheme atom-dark-256
 let g:molokai_original = 0
 let g:rehash256 = 1
 let g:instant_markdown_slow = 1
-"set background=dark
+set background=dark
 syntax on
 "let g:solarized_termcolors=256
 set background=dark
